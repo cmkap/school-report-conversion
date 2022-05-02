@@ -1,10 +1,11 @@
 const report = (str) => {
     let arry = str.split(",")
-    // console.log(arry)
+ 
     let greenCount = 0;
     let amberCount = 0;
     let redCount = 0;
     let obj = {}
+    let stringArray = []
     
 // console.log(Object.keys(obj).length === 0)
 
@@ -24,15 +25,11 @@ const report = (str) => {
     })
 
     for(const key in obj){
-        // console.log(`${key}: ${obj[key]}`)
-        return`${key}: ${obj[key]}`
+        stringArray.push(`${key}: ${obj[key]}`)
     }
 
-    
-c
-    
+    return stringArray.join('\n')
 
-    
 }
 
 

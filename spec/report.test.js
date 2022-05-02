@@ -20,15 +20,27 @@ describe('report', () =>{
         expect(report("Green,Green")).toBe("Green: 2")
     })
 
-    it("Returns three green grades", () =>{
-        expect(report("Green,Green,Green")).toBe("Green: 3")
-    })
-
     it("Returns two amber grades", () =>{
         expect(report("Amber,Amber")).toBe("Amber: 2")
     })
 
+    it("Returns two red grades", () =>{
+        expect(report("Red,Red")).toBe("Red: 2")
+    })
+    
+    it("Returns three green grades", () =>{
+        expect(report("Green,Green,Green")).toBe("Green: 3")
+    })
+
     it("Returns three amber grades", () =>{
         expect(report("Amber,Amber,Amber")).toBe("Amber: 3")
+    })
+
+    it("Returns three red grades", () =>{
+        expect(report("Red,Red,Red")).toBe("Red: 3")
+    })
+
+    it("Returns one green and one amber", () =>{
+        expect(report("Green,Amber")).toBe("Green: 1\nAmber: 1")
     })
 })
