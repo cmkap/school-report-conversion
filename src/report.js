@@ -10,8 +10,10 @@ const report = (grades) => {
     
     if (grades === "Green") {
         return "Green: 1";
-    } else {
+    } else if (grades === "Amber"){
         return "Amber: 1";
+    } else {
+        return "Red: 1";
     }
 
 }

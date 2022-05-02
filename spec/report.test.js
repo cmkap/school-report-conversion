@@ -12,6 +12,9 @@ describe('report', () =>{
         expect(report("Amber")).toBe("Amber: 1")
     })
 
-    it.todo("processes a single red grade")
+    it("processes a single red grade",() => {
+        expect(report("Red")).toBe("Red: 1")
+    })
+    
     
 })
