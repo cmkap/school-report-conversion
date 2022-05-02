@@ -43,4 +43,7 @@ describe('report', () =>{
     it("Returns one green and one amber", () =>{
         expect(report("Green,Amber")).toBe("Green: 1\nAmber: 1")
     })
+    it("Returns one green and one amber and one red", () =>{
+        expect(report("Green,Amber,Red")).toBe("Green: 1\nAmber: 1\nRed: 1")
+    })
 })
