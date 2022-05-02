@@ -1,21 +1,38 @@
-const report = (grades) => {
-//     let gradeElements = grades.split(',')
-
-//     for(let i = 0; i < gradeElements.length; i++) {
-//         if (grade)
-//     }
-// }
-
-// "Green: 1"
+const report = (str) => {
+    let arry = str.split(",")
+    // console.log(arry)
+    let greenCount = 0;
+    let amberCount = 0;
+    let redCount = 0;
+    let obj = {}
     
-    if (grades === "Green") {
-        return "Green: 1";
-    } else if (grades === "Amber"){
-        return "Amber: 1";
-    } else {
-        return "Red: 1";
+// console.log(Object.keys(obj).length === 0)
+
+    arry.forEach(element => {
+
+            if (element === "Green") {
+                greenCount += 1;
+                obj[element] = greenCount;
+            } else if (element === "Amber"){
+                amberCount += 1;
+                obj[element] =amberCount;
+            } else {
+                redCount += 1;
+                obj[element] =redCount;
+            }
+        
+    })
+
+    for(const key in obj){
+        // console.log(`${key}: ${obj[key]}`)
+        return`${key}: ${obj[key]}`
     }
 
+    
+c
+    
+
+    
 }
 
 
