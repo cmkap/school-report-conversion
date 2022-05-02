@@ -5,7 +5,13 @@ const report = (grades) => {
 //         if (grade)
 //     }
 // }
-    return "Green: 1"
+
+// "Green: 1"
+    let gradeTotal = grades.split().length
+    let grade =  grades;
+    
+    return `${grade}: ${gradeTotal}`
+
 }
 
 

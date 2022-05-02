@@ -7,4 +7,5 @@ describe('report', () =>{
     it("processes a single grade",() => {
         expect(report("Green")).toBe("Green: 1")
     })
+    
 })
