@@ -28,7 +28,29 @@ const report = (str) => {
         stringArray.push(`${key}: ${obj[key]}`)
     }
 
-    return stringArray.join('\n')
+    stringArray.sort((a,b) => {
+       if(a.startsWith("Green") && b.startsWith("Amber")) {
+           return -1
+       } else if(a.startsWith("Green") && b.startsWith("Red")) {
+           return -1
+
+       } else if(a.startsWith("Amber") && b.startsWith("Green")) {
+           return 1
+ 
+       } else if(a.startsWith("Amber") && b.startsWith("Red")) {
+           return -1
+
+       } else if(a.startsWith("Red") && b.startsWith("Green")) {
+           return 1
+
+       } else if(a.startsWith("Red") && b.startsWith("Amber")) {
+           return 1
+       }
+    })
+
+   let order = stringArray
+
+    return order.join('\n')
 
 }
 
